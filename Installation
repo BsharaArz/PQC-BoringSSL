@@ -1,0 +1,35 @@
+# Installing on MacOS
+
+## Prerequisite
+
+Need to have brew, cmake, go and ninja installed
+
+```
+#install brew
+
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"\n
+
+brew install cmake
+
+brew install ninja
+
+brew install go
+```
+
+## installing BoringSSL
+
+```
+git clone https://boringssl.googlesource.com/boringssl
+cd boringssl
+
+mkdir build
+cd build
+cmake -GNinja ..
+ninja
+```
+
+and if the above procedure succeeds, you may want to run the built-in self test from the main *boringssl* directory
+
+```
+go run ../util/all_tests.go
+```
