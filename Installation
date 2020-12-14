@@ -1,4 +1,4 @@
-# Installing on MacOS
+# Installing BoringSSL on MacOS
 
 ## Prerequisite
 
@@ -32,4 +32,19 @@ and if the above procedure succeeds, you may want to run the built-in self test 
 
 ```
 go run ../util/all_tests.go
+```
+
+
+# Installing Chromium on MacOS
+
+```
+git clone https://chromium.googlesource.com/chromium/tools/depot_tools
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:~/Downloads/depot_tools
+git config --global core.precomposeUnicode true
+mkdir chromium && cd chromium
+sudo fetch chromium
+cd src
+xcode-select --install
+sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
+sudo gn gen out/Default
 ```
