@@ -630,6 +630,9 @@ extern "C" {
 
 #define TLS_MD_MAX_CONST_SIZE 20
 
+// Adding PQC ciphersuits
+#define TLS1_CK_SABER_WITH_AES_256_GCM_SHA384
+#define TLS1_TXT_SABER_WITH_AES_256_GCM_SHA384 "SABER-AES256-GCM-SHA384"
 
 #ifdef  __cplusplus
 }  // extern C
